@@ -1,7 +1,7 @@
 <img src="https://i.pinimg.com/originals/23/a1/1f/23a11f14ab93d3ed4541960141e380ad.gif" width="200" alt="Security Tools by gh0$t. Affiliation : Anonymous (hacker group, global)." title="Security Tools by gh0$t. Affiliation : Anonymous (hacker group, global)." />  
 
-# Infinite_cURL_Attack (Sequential)
-Infinite cURL Attack (Sequential)  
+# Infinite_cURL_Attack
+Infinite cURL Attack
 
 **USAGE** : Copy-Paste-Edit the following code in the Terminal/CMD.
 ```
